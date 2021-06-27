@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* font-family: 'Kumbh Sans', sans-serif; */
+:root {
+  --main-bg-clr: hsl(185, 75%, 39%);
+  --main-txt-clr: hsl(229, 23%, 23%);
+  --sub-txt-clr: hsl(227, 10%, 46%);
+  --darkgray: hsl(0, 0%, 59%);
+}
+* {
+  box-sizing: border-box;
+}
+/* The svgs were applied in the body itself */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--main-bg-clr);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 48vw bottom 40vh, left 42vw top 50vh;
+}
+/* Full screen container for centering */
+.full-screen-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* The card itself */
+.container {
+  background-color: white;
+  display: grid;
+  grid-template-rows: repeat (4, 1fr);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  color: var(--main-txt-clr);
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* The div around the profile picture to move it up */
+.main {
+  position: relative;
+  top: -50%;
+}
+/* The image itself */
+.main img {
+  border: 0.4rem solid white;
+  border-radius: 50%;
+}
+/* Common styles for the ul's used  */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* The name, age and city */
+.details {
+  text-align: center;
+  position: relative;
+  top: -2rem;
+}
+/* stats ul */
+.stats {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1rem;
+}
+/* stat li in stats ul */
+.stat {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  line-height: 1.5rem;
+}
+/* The numbers in stat */
+.stat strong {
+  font-size: 1.1rem;
+}
+/* Common font in main div and stats ul; applied this class wherever needed */
+.sub-text {
+  color: var(--sub-txt-clr);
+  font-weight: 400;
+}
+/*An article about its disapperance before applying the width 100%: (it happens even in flexbox):https://dev.to/alvaromontoro/the-disappearing-line-a-css-mystery-3e35 */
+hr {
+  width: 100%;
+  /* height: 0.01px; */
+  border-color: hsl(0, 0%, 59%);
+  opacity: 0.2;
+}
